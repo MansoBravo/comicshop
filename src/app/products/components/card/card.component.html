@@ -1,0 +1,31 @@
+<mat-card *ngIf="product.isActive===true" (click)="this.url == '/dashboard/list' ? edit(product._id) : view(product._id)" style="cursor: pointer;">
+ <img mat-card-image [src]="product.portada != null ? product.portada : 'assets/images/no-image.png'" [alt]="product.titulo">
+
+  <mat-card-header>
+    <mat-card-title>{{ product.titulo }}</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <h4>{{ product.editorial }}</h4>
+    <h4>{{ product.precio }}€</h4>
+  </mat-card-content>
+
+  <mat-divider></mat-divider>
+
+  <mat-card-actions *ngIf="this.url == '/dashboard/list'">
+    <button mat-button mat-raised color="primary" [routerLink]="['/dashboard/edit', product._id]">
+      <mat-icon>edit</mat-icon>
+      Editar
+    </button>
+
+    <!-- <span class="spacer"></span>
+
+    <button mat-button mat-raised [routerLink]="['/products', product._id]">
+      <mat-icon>more_horiz</mat-icon>
+      Más
+    </button> -->
+
+  </mat-card-actions>
+
+</mat-card>
+

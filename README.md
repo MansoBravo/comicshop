@@ -1,6 +1,6 @@
 # AuthApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.4.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0-rc.0.
 
 ## Development server
 

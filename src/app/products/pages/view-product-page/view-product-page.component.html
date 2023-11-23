@@ -1,0 +1,43 @@
+<div class="grid">
+
+  <div class="col-12 sm:col-4">
+
+    <mat-card>
+      <img [src]="currentProduct.portada != null ? currentProduct.portada : 'assets/images/no-image.png'" alt="imagen del héroe" mat-card-image>
+    </mat-card>
+
+  </div>
+
+  <div class="col-12 sm:col-8">
+    <mat-card>
+      <mat-card-content>
+
+        <h1>{{ currentProduct.titulo }}</h1>
+        <h4>{{ currentProduct.editorial }}</h4>
+
+        <div class="justify-content-between">
+          <p>Precio: {{ currentProduct.precio }}€</p>
+          <a
+              mat-flat-button
+              color="primary"
+              (click)="irTienda(currentProduct.ISBN)"
+            >
+              <mat-icon>search</mat-icon>
+              Comprar  en libreria
+          </a>
+        </div>
+
+        <p>Género: {{ currentProduct.genero }}</p>
+
+        <p>Descripción: {{ currentProduct.descripcion }}</p>
+
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+
+</div>
+
+
+
+
